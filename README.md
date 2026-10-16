@@ -125,3 +125,5 @@ Your support keeps this list maintained and growing!
 
 **Made for agile teams, project managers, self-hosting enthusiasts, and privacy-conscious organizations.** 🧩
 Let's make Kanban project management more open, self-hosted, and vendor-neutral. 🌍
+# Awesome-Kanban-Project-Management
+
