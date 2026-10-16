@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Awesome Kanban and Project Management banner">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d2b64">
+        <animate attributeName="stop-color" values="#1d2b64;#2c5364;#0f2027;#1d2b64" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="55%" stop-color="#274d8f">
+        <animate attributeName="stop-color" values="#274d8f;#27777f;#2c5364;#274d8f" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#38ef7d">
+        <animate attributeName="stop-color" values="#11998e;#38ef7d;#2b5876;#11998e" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f9d423"/>
+      <stop offset="100%" stop-color="#ff4e50"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- faint kanban columns backdrop -->
+  <g opacity="0.10" fill="#ffffff">
+    <rect x="80" y="80" width="160" height="180" rx="10"/>
+    <rect x="270" y="80" width="160" height="180" rx="10"/>
+    <rect x="460" y="80" width="160" height="180" rx="10"/>
+  </g>
+
+  <!-- animated drifting kanban cards (background layer) -->
+  <g>
+    <g opacity="0.35">
+      <rect x="90" y="100" width="140" height="46" rx="8" fill="url(#cardGrad)"/>
+      <rect x="280" y="240" width="140" height="12" rx="6" fill="#ffffff" opacity="0.4">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-190; 0,0" dur="9s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="470" y="120" width="140" height="46" rx="8" fill="url(#cardGrad)">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,90; 0,0" dur="12s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <g opacity="0.5">
+      <!-- card drifting left to right behind text -->
+      <g>
+        <rect x="680" y="60" width="170" height="52" rx="9" fill="url(#cardGrad)" opacity="0.7"/>
+        <rect x="694" y="74" width="90" height="8" rx="4" fill="#274d8f" opacity="0.7"/>
+        <rect x="694" y="88" width="120" height="8" rx="4" fill="#388c7b" opacity="0.6"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 460,130; 0,0" dur="14s" repeatCount="indefinite"/>
+      </g>
+      <g>
+        <rect x="700" y="220" width="150" height="46" rx="9" fill="url(#cardGrad)" opacity="0.6"/>
+        <rect x="714" y="234" width="100" height="8" rx="4" fill="#274d8f" opacity="0.6"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 380,-90; 0,0" dur="17s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- small floating dots -->
+    <circle cx="980" cy="70" r="5" fill="#ffffff" opacity="0.5">
+      <animate attributeName="cy" values="70;230;70" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.15;0.5" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1060" cy="230" r="7" fill="#f9d423" opacity="0.5">
+      <animate attributeName="cy" values="230;60;230" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1130" cy="140" r="4" fill="#ffffff" opacity="0.6">
+      <animate attributeName="cy" values="140;90;140" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- foreground: title & subtitle (always on top) -->
+  <g>
+    <rect x="0" y="92" width="1200" height="116" fill="#0a1e3f" opacity="0.35"/>
+    <text x="600" y="152" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">Awesome Kanban &amp; Project Management</text>
+    <text x="600" y="192" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#dff5ee" text-anchor="middle">Curated list of SaaS platforms &amp; open-source Kanban and Agile tools</text>
+    <rect x="480" y="75" width="240" height="4" rx="2" fill="url(#accent)"/>
+  </g>
+</svg>
